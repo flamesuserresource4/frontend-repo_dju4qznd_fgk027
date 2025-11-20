@@ -15,14 +15,22 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(180deg, #FFFAE8 0%, #ffffff 50%, #EAF2FF 100%);
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased text-blue-900/90;
   }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
+/* Soft card */
+@layer components {
+  .pastel-card {
+    @apply rounded-2xl border border-blue-200/60 bg-white/80 shadow-sm backdrop-blur;
+  }
+}
+
+/* Simple animations */
 @layer utilities {
   .animate-in {
     animation-name: animateIn;
